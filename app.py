@@ -75,7 +75,7 @@ if page == "表一：單一股票相關係數":
             styled = (
                 df.style.background_gradient(
                     subset=corr_cols,
-                    cmap="RdYlGn",
+                    cmap="RdYlGn_r",
                     vmin=-1,
                     vmax=1,
                 )
@@ -85,7 +85,7 @@ if page == "表一：單一股票相關係數":
             st.caption(
                 f"共 {len(df)} 檔電子股"
                 + (f"（{selected_group}）" if selected_group != "全選" else "")
-                + "，依 120 天相關係數由高到低排序（綠=正相關、紅=負相關）"
+                + "，依 120 天相關係數由高到低排序（紅=正相關、綠=負相關）"
             )
 
 else:
@@ -202,11 +202,11 @@ else:
                                         v = float(val)
                                         if v > 0:
                                             arr.iloc[i, df.columns.get_loc(c)] = (
-                                                "background-color: #d4edda; color: black"
+                                                "background-color: #f8d7da; color: black"
                                             )
                                         elif v < 0:
                                             arr.iloc[i, df.columns.get_loc(c)] = (
-                                                "background-color: #f8d7da; color: black"
+                                                "background-color: #d4edda; color: black"
                                             )
                                     except (ValueError, TypeError):
                                         pass
