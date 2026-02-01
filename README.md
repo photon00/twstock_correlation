@@ -1,3 +1,20 @@
+---
+title: 台股相關係數分析
+emoji: 📈
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+python_version: "3.10"
+short_description: 計算台股電子股間股價相關係數，雙股票價比比較
+tags:
+  - finance
+  - taiwan-stock
+  - correlation
+  - streamlit
+pinned: false
+---
+
 # 台股相關係數分析系統
 
 使用 **yfinance** 同時抓取多支股票、**twstock** 提供電子股清單，計算電子股之間的股價相關係數。
