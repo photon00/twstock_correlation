@@ -58,6 +58,12 @@ streamlit run app.py --server.runOnSave=true
 - 顯示最近 120 天股價走勢圖
 - 顯示股價相除（價比）走勢圖
 
+## twstock 代碼更新
+
+使用 APScheduler 在主服務內排程：
+- **啟動時**：背景執行 `twstock.__update_codes()` 更新 TWSE/TPEX 股票列表
+- **每日 6:00 UTC**（台灣 14:00）：自動排程更新
+
 ## 注意事項
 - 僅涵蓋電子股（半導體、電腦週邊、電子零組件、光電、通信網路等）
 - 股價資料由 Yahoo Finance (yfinance) 提供

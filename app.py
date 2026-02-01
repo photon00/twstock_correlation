@@ -2,6 +2,8 @@
 台股相關係數分析系統 - Streamlit 應用
 """
 
+import scheduler_config  # noqa: F401 - starts twstock update scheduler
+
 import streamlit as st
 import pandas as pd
 import altair as alt

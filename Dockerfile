@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Build deps for lxml (twstock); must install before pip
+# Build deps for lxml (twstock)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     libc-dev \

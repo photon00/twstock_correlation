@@ -3,5 +3,6 @@ matplotlib>=3.5.0
 twstock>=1.4.0
 yfinance>=0.2.0
 streamlit>=1.50
+APScheduler>=3.10.0
 pandas>=2.0
 numpy>=1.23
